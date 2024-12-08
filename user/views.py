@@ -30,3 +30,16 @@ def t4(request):
             output += line.replace("<>", "我就是需要被替换的内容,可能从数据库中来")
         return HttpResponse(output)
 
+def t5(request): # 返回内容json
+    # content = [1, 2, 3]
+    content = {'ids':[1,2,3,4]}
+    # return JsonResponse(content, safe=False) # content-type: application/json
+    return JsonResponse(content)
+
+
+
+
+
+
+
+

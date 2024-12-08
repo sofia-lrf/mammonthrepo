@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from user.views import t1,t2,t3,t4  # 测试使用，生产不建议写在这里
+from user.views import t1,t2,t3,t4,t5  # 测试使用，生产不建议写在这里
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -24,6 +24,7 @@ urlpatterns = [
     path('index.html', t2), # 测试
     path('test.jsp', t3), # /test.jsp -> t3
     path('t4.cc', t4),
+    path('t5', t5),
 ]
 
 print(urlpatterns)
