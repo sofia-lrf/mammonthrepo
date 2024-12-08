@@ -16,8 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from user.views import t1,t2,t3,t4  # 测试使用，生产不建议写在这里
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('users/', include('user.urls'))  # /users/ 去往二级路由了
+    path('users/', include('user.urls')),  # /users/ 去往二级路由了
+    path('index.html', t2), # 测试
+    path('test.jsp', t3), # /test.jsp -> t3
+    path('t4.cc', t4),
 ]
+
+print(urlpatterns)
